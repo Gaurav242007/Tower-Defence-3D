@@ -3,10 +3,21 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     private Transform target;
+
+    [Header("Attributes")]
     public float range = 15f;
+    public float fireRate = 1f;
+    private float fireCountdown = 0f;
+
+    [Header("Unity Setup Fields")]
+
     public string enemyTag = "Enemy";
+
     public Transform partToRotate;
     public float turretSpeed = 10f;
+
+    public GameObject bulletPrefab;
+    public Transform firePoint;
 
     void Start()
     {
@@ -58,9 +69,27 @@ public class Turret : MonoBehaviour
         // it point toward turret gun
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0);
 
+        if (fireCountdown <= 0f)
+        {
+            Shoot();
+            // more the fire rate faster 
+            // the next bullet will shoot
+            fireCountdown = 1f / fireRate;
+        }
+
+        fireCountdown -= Time.deltaTime;
     }
 
+    void Shoot()
+    {
+        // typecasting to GameObject type
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
 
+        if (bullet != null)
+            bullet.Seek(target);
+
+    }
 
     void OnDrawGizmosSelected()
     {
