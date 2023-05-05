@@ -24,6 +24,7 @@ public class BuildManager : MonoBehaviour
     // else will return false
     // instead of a function using this 
     public bool CanBuild { get { return turretToBuild != null; } }
+    public bool hasEnoughMoneyToBuild { get { return PlayerStats.Money >= turretToBuild.cost; } }
 
     public void BuildTurretOn(Node node)
     {
