@@ -4,6 +4,7 @@ public class Bullet : MonoBehaviour
 {
     private Transform target;
     public float speed = 70f;
+    public int damage = 50;
     // explosion radius for mission launcher 
     // to explode in a particular area
     // and damages all enemies within it.
@@ -17,6 +18,9 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
+        // if the enemy is Damaged
+        // or enemy og far
+        // then the bullet automatically destroys it self
         if (target == null)
         {
             Destroy(gameObject);
@@ -73,7 +77,12 @@ public class Bullet : MonoBehaviour
 
     void Damage(Transform enemy)
     {
-        Destroy(enemy.gameObject);
+        Enemy e = enemy.GetComponent<Enemy>();
+
+        if (e != null)
+        {
+            e.TakeDamage(damage);
+        }
     }
 
     // viewing the range highlighted
