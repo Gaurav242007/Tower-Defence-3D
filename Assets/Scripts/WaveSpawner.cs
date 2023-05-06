@@ -26,7 +26,10 @@ public class WaveSpawner : MonoBehaviour
         }
         // reducing countdown to get to  0 and run SpawnWave()
         countdown -= Time.deltaTime;
-        waveCountdownText.text = Mathf.Round(countdown).ToString();
+        // adjusting/clamping the countdown value between 0 and infinity 
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+        // formatting to time string
+        waveCountdownText.text = string.Format("{0:00.00}", countdown);
     }
 
     // use system.collections while using coroutine
