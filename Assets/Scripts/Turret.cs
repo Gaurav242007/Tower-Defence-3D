@@ -15,6 +15,8 @@ public class Turret : MonoBehaviour
     [Header("Use Laser")]
     public bool useLaser = false;
     public LineRenderer lineRenderer;
+    public ParticleSystem impactEffect;
+    public Light impactLight;
 
 
     [Header("Unity Setup Fields")]
@@ -73,6 +75,8 @@ public class Turret : MonoBehaviour
                 if (lineRenderer.enabled)
                 {
                     lineRenderer.enabled = false;
+                    impactEffect.Stop();
+                    impactLight.enabled = false;
                 }
             }
             return;
@@ -103,11 +107,26 @@ public class Turret : MonoBehaviour
     void Laser()
     {
         if (!lineRenderer.enabled)
+        {
             lineRenderer.enabled = true;
+            impactEffect.Play();
+            impactLight.enabled = true;
+        }
         // STARTING POSITION OF LASER
         lineRenderer.SetPosition(0, firePoint.position);
         // END POSITION OF LASER
         lineRenderer.SetPosition(1, target.position);
+
+        Vector3 dir = firePoint.position - target.position;
+        // making so that 
+        // particle doesn't originate from centre
+        // but away from the radius 
+        // to point toward the laster / beamer
+        impactEffect.transform.position = target.position + dir.normalized;
+        // MAKING IMPACT EFFECT POINT TOWARDS LASER
+        // Quaternion.LookRotation takes direction and then it looks
+        // in that direction
+        impactEffect.transform.rotation = Quaternion.LookRotation(dir);
     }
 
     void LockOnTarget()
