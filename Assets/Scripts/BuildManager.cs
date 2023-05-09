@@ -19,6 +19,10 @@ public class BuildManager : MonoBehaviour
     public GameObject buildEffect;
 
     private TurretBluePrint turretToBuild;
+    private Node selectedNode;
+
+    // need to do this whenever using property of non static methods/scripts
+    public NodeUI nodeUI;
     // will return true if turretToBuild is not null
     // else will return false
     // instead of a function using this 
@@ -48,8 +52,29 @@ public class BuildManager : MonoBehaviour
 
     }
 
+    public void SelectNode(Node node)
+    {
+        if (selectedNode == node)
+        {
+            DeselectNode();
+            return;
+        }
+        selectedNode = node;
+        turretToBuild = null;
+
+        nodeUI.SetTarget(node);
+
+    }
+
+    public void DeselectNode()
+    {
+        selectedNode = null;
+        nodeUI.Hide();
+    }
+
     public void SelectTurretToBuild(TurretBluePrint turret)
     {
         turretToBuild = turret;
+        DeselectNode();
     }
 }

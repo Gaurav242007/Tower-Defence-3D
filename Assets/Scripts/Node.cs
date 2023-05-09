@@ -32,15 +32,15 @@ public class Node : MonoBehaviour
     {
         if (EventSystem.current.IsPointerOverGameObject())
             return;
-        // check if the turret we want to build is selected 
-        if (!buildManager.CanBuild)
-            return;
         // if already have build turret to this node
         if (turret != null)
         {
-            Debug.Log("Can't build there! TODO: Display on Screen");
+            buildManager.SelectNode(this);
             return;
         }
+        // check if the turret we want to build is selected 
+        if (!buildManager.CanBuild)
+            return;
         // passing the function all properties of 
         // the current GameObject
         buildManager.BuildTurretOn(this);
@@ -53,8 +53,10 @@ public class Node : MonoBehaviour
         // and not instantiate any
         if (EventSystem.current.IsPointerOverGameObject())
             return;
+
         if (!buildManager.CanBuild)
             return;
+
         if (buildManager.HasMoney)
         {
             rend.material.color = hoverColor;
