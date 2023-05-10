@@ -103,6 +103,18 @@ public class Node : MonoBehaviour
         Debug.Log("Turret Upgraded!");
     }
 
+    public void SellTurret()
+    {
+        PlayerStats.Money += turretBluePrint.GetSellAmount();
+
+        GameObject effect = (GameObject)Instantiate(buildManager.sellEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 5f);
+
+        // Destroying the turrets
+        Destroy(turret);
+        turretBluePrint = null;
+    }
+
     void OnMouseEnter()
     {
         // if the turret icon overlap node 

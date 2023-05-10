@@ -44,8 +44,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0.07777381, a: 1}
-  m_Intensity: 3
-  m_Range: 10
+  m_Intensity: 3.5
+  m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -379,8 +379,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 3
-      minScalar: 2
+      scalar: 4.5
+      minScalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4967,9 +4967,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b2051f2370fbe3748903453043a22aa0, type: 2}
-  - {fileID: 2100000, guid: d69baa3a2bc686a42bc2b17e8fdaa75c, type: 2}
-  - {fileID: 2100000, guid: e6cd319256caf914f80a4139ff345831, type: 2}
+  - {fileID: 2100000, guid: 3de5483b211aebd419223bddf4512abc, type: 2}
+  - {fileID: 2100000, guid: d943776c452869a48b9ec216198aa53e, type: 2}
+  - {fileID: 2100000, guid: eaaa1459507647544858bd69c21d63ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5003,7 +5003,7 @@ GameObject:
   - component: {fileID: 3541683947538858676}
   - component: {fileID: 978186693998792476}
   m_Layer: 0
-  m_Name: Laser Beamer
+  m_Name: Laser Beamer_Upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5043,8 +5043,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   fireRate: 1
   useLaser: 1
-  damageOverTime: 30
-  slowPct: 0.5
+  damageOverTime: 45
+  slowPct: 0.8
   lineRenderer: {fileID: 978186693998792476}
   impactEffect: {fileID: 4957180147062974796}
   impactLight: {fileID: 1599470144}
@@ -5215,7 +5215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4374579998401848636}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.3974535, z: 0}
+  m_LocalPosition: {x: 0, y: 1.273, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5250,7 +5250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8174385377926722676}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 0.49525404, z: 0.00000011920929}
+  m_LocalPosition: {x: 0, y: 0.37080047, z: 0.00000011920929}
   m_LocalScale: {x: 100, y: 100, z: 63.703358}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5285,8 +5285,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb028cdfc00ff1b40a10f3c9c93f735b, type: 2}
-  - {fileID: 2100000, guid: a1234e3f09ba9c949979c302a35b3cec, type: 2}
+  - {fileID: 2100000, guid: 47dacc9de64ec2845b89adcd5aeb188c, type: 2}
+  - {fileID: 2100000, guid: a57559210ffc11f48ab797b9f19c4c49, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
