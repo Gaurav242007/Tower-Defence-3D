@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 1258990749}
   - component: {fileID: -2548999324816755278}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy_Taugh
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -319,7 +319,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6845e78e14320a641b442b6df92c566e, type: 2}
+  - {fileID: 2100000, guid: 4038135c2a2f8484a86de57f2e5687db, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -366,11 +366,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b17217bb9dd11c34b872ab0eb5e5a0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 10
+  startSpeed: 7
   speed: 10
-  startHealth: 100
-  worth: 50
-  deathEffect: {fileID: 6341467940619040481, guid: 360238f092457a44ea13014a952640c4, type: 3}
+  startHealth: 350
+  worth: 140
+  deathEffect: {fileID: 6341467940619040481, guid: 9788eb6d661930940bf9eb503353fca4, type: 3}
   healthBar: {fileID: 81306027}
 --- !u!114 &-2548999324816755278
 MonoBehaviour:

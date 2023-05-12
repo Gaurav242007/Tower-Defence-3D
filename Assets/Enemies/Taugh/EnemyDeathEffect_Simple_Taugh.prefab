@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6341467940619040483}
   - component: {fileID: 6341467940619040482}
   m_Layer: 0
-  m_Name: EnemyDeathEffect
+  m_Name: EnemyDeathEffect_Simple_Taugh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4819,7 +4819,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6845e78e14320a641b442b6df92c566e, type: 2}
+  - {fileID: 2100000, guid: 4038135c2a2f8484a86de57f2e5687db, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
