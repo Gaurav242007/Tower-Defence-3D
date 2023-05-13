@@ -57,7 +57,7 @@ public class WaveSpawner : MonoBehaviour
         {
             Debug.Log("Level WON!");
             // TODO:
-            // want to the disable this script
+            // want to disable this script
             this.enabled = false;
         }
     }
