@@ -969,6 +969,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneFader: {fileID: 452170333}
+  levelButtons:
+  - {fileID: 1939785421}
+  - {fileID: 1881859932}
 --- !u!4 &942620808
 Transform:
   m_ObjectHideFlags: 0
@@ -1161,8 +1164,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1889480102}
   m_HandleRect: {fileID: 1889480101}
   m_Direction: 2
-  m_Value: 1.0000002
-  m_Size: 0.5207394
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1343,6 +1346,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4527207370228572385, guid: d5e1bb3709c256a4c9069d4b484b8666, type: 3}
   m_PrefabInstance: {fileID: 1881859928}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1881859932 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4527207370228572384, guid: d5e1bb3709c256a4c9069d4b484b8666, type: 3}
+  m_PrefabInstance: {fileID: 1881859928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1889480100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,6 +1433,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889480100}
   m_CullTransparentMesh: 1
+--- !u!114 &1939785421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4527207370228572384, guid: d5e1bb3709c256a4c9069d4b484b8666, type: 3}
+  m_PrefabInstance: {fileID: 4527207370305560625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2142550578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,6 +1644,10 @@ PrefabInstance:
     - target: {fileID: 4527207370228572385, guid: d5e1bb3709c256a4c9069d4b484b8666, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527207370228572387, guid: d5e1bb3709c256a4c9069d4b484b8666, type: 3}
+      propertyPath: m_Color.a
+      value: 0.2627451
       objectReference: {fileID: 0}
     - target: {fileID: 4527207370228572414, guid: d5e1bb3709c256a4c9069d4b484b8666, type: 3}
       propertyPath: m_Name
