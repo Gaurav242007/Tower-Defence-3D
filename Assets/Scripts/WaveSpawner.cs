@@ -23,6 +23,13 @@ public class WaveSpawner : MonoBehaviour
         {
             return;
         }
+
+        if (waveIndex == waves.Length)
+        {
+            gameManager.WinLevel();
+            this.enabled = false;
+        }
+        Debug.Log(countdown);
         // first will take 2second (or default countdown) to spawn a wave
         // then afterwards will take 5 seconds (or timeBetweenWaves)
         if (countdown <= 0f)
@@ -52,12 +59,6 @@ public class WaveSpawner : MonoBehaviour
         yield return new WaitForSeconds(1f / wave.rate);
 
         waveIndex++;
-
-        if (waveIndex == waves.Length)
-        {
-            gameManager.WinLevel();
-            this.enabled = false;
-        }
     }
 
     void SpawnEnemy(GameObject enemy)
