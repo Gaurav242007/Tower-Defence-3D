@@ -19038,9 +19038,8 @@ MonoBehaviour:
   - enemy: {fileID: 8843195132478008925, guid: 441725d5332410a4a9ca9e22e670d7c5, type: 3}
     count: 10
     rate: 3
-  enemyPrefab: {fileID: 8843195132478008921, guid: a4e5114c70f150b4a9aaba602b0bf9dc, type: 3}
   spawnPoint: {fileID: 69070882}
-  timeBetweenWaves: 2
+  timeBetweenWaves: 5
   waveCountdownText: {fileID: 1992451872}
   gameManager: {fileID: 1799871144}
 --- !u!114 &1799871142

@@ -17246,8 +17246,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 416837707}
-        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+      - m_Target: {fileID: 416837709}
+        m_TargetAssemblyTypeName: CompleteLevel, Assembly-CSharp
         m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
@@ -19070,8 +19070,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f066dde33ef87894e92cf31da7baefd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 400
-  startlives: 1
+  startMoney: 1400
+  startlives: 3
 --- !u!114 &1799871144
 MonoBehaviour:
   m_ObjectHideFlags: 0
