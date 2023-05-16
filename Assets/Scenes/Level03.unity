@@ -19024,23 +19024,61 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemy: {fileID: 8843195132478008925, guid: a4e5114c70f150b4a9aaba602b0bf9dc, type: 3}
-    count: 1
+    count: 10
     rate: 2
   - enemy: {fileID: 8843195132478008925, guid: a4e5114c70f150b4a9aaba602b0bf9dc, type: 3}
-    count: 2
-    rate: 2
-  - enemy: {fileID: 8843195132478008925, guid: a4e5114c70f150b4a9aaba602b0bf9dc, type: 3}
-    count: 5
+    count: 15
     rate: 2
   - enemy: {fileID: 8843195132478008925, guid: f25e1df5b638f8c4998fecaf0d56be7e, type: 3}
-    count: 3
+    count: 8
+    rate: 1
+  - enemy: {fileID: 8843195132478008925, guid: f25e1df5b638f8c4998fecaf0d56be7e, type: 3}
+    count: 15
     rate: 1
   - enemy: {fileID: 8843195132478008925, guid: 441725d5332410a4a9ca9e22e670d7c5, type: 3}
+    count: 25
+    rate: 4
+  - enemy: {fileID: 8843195132478008925, guid: f25e1df5b638f8c4998fecaf0d56be7e, type: 3}
+    count: 25
+    rate: 2
+  - enemy: {fileID: 8843195132478008925, guid: c21f516cbfb67aa40836a4236b03355b, type: 3}
+    count: 16
+    rate: 1
+  - enemy: {fileID: 8843195132478008925, guid: f25e1df5b638f8c4998fecaf0d56be7e, type: 3}
+    count: 24
+    rate: 2
+  - enemy: {fileID: 8843195132478008925, guid: f25e1df5b638f8c4998fecaf0d56be7e, type: 3}
+    count: 35
+    rate: 2
+  - enemy: {fileID: 8843195132478008925, guid: c21f516cbfb67aa40836a4236b03355b, type: 3}
     count: 10
+    rate: 2
+  - enemy: {fileID: 8843195132478008925, guid: e8accce11bd5d5c46895ad69a4d4f271, type: 3}
+    count: 3
+    rate: 1
+  - enemy: {fileID: 8843195132478008925, guid: e8accce11bd5d5c46895ad69a4d4f271, type: 3}
+    count: 6
+    rate: 1
+  - enemy: {fileID: 8843195132478008925, guid: c21f516cbfb67aa40836a4236b03355b, type: 3}
+    count: 30
+    rate: 2
+  - enemy: {fileID: 8843195132478008925, guid: e8accce11bd5d5c46895ad69a4d4f271, type: 3}
+    count: 10
+    rate: 2
+  - enemy: {fileID: 8843195132478008925, guid: 441725d5332410a4a9ca9e22e670d7c5, type: 3}
+    count: 60
+    rate: 4
+  - enemy: {fileID: 8843195132478008925, guid: e8accce11bd5d5c46895ad69a4d4f271, type: 3}
+    count: 18
+    rate: 2
+  - enemy: {fileID: 8843195132478008925, guid: e8accce11bd5d5c46895ad69a4d4f271, type: 3}
+    count: 25
     rate: 3
-  enemyPrefab: {fileID: 8843195132478008921, guid: a4e5114c70f150b4a9aaba602b0bf9dc, type: 3}
+  - enemy: {fileID: 8843195132478008925, guid: 4cdd47d6e9ec6214a8567e501fce6140, type: 3}
+    count: 2
+    rate: 1
   spawnPoint: {fileID: 69070882}
-  timeBetweenWaves: 2
+  timeBetweenWaves: 12
   waveCountdownText: {fileID: 1992451872}
   gameManager: {fileID: 1799871144}
 --- !u!114 &1799871142
@@ -19070,7 +19108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f066dde33ef87894e92cf31da7baefd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 2500
+  startMoney: 3000
   startlives: 5
 --- !u!114 &1799871144
 MonoBehaviour:
