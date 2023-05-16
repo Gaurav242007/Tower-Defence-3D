@@ -20,9 +20,13 @@ public class WaveSpawner : MonoBehaviour
 
     private int waveIndex = 0;
 
+    void Awake()
+    {
+        Time.timeScale = 1;
+    }
+
     void Update()
     {
-        Debug.Log(Time.fixedDeltaTime);
         if (EnemiesAlive > 0)
         {
             return;

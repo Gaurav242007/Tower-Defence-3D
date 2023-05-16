@@ -366,10 +366,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b17217bb9dd11c34b872ab0eb5e5a0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 22
+  startSpeed: 25
   speed: 10
   startHealth: 8000
-  worth: 3500
+  worth: 700
   deathEffect: {fileID: 6341467940619040481, guid: 9788eb6d661930940bf9eb503353fca4, type: 3}
   healthBar: {fileID: 81306027}
 --- !u!114 &-2548999324816755278
