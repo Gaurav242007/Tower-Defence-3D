@@ -4,15 +4,41 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public AudioSource selectTurret;
+    public AudioSource upgradeTurret;
+    public AudioSource instantiateTurret;
+    public AudioSource enemyDestroyEffect;
+    public AudioSource sellSFX;
+    public AudioSource winLevelSFX;
+    public AudioSource loseLevelSFX;
+    public void PlaySelectTurretSFX()
     {
-        
+        selectTurret.Play();
+    }
+    public void PlayUpgradeTurretSFX()
+    {
+        upgradeTurret.Play();
+    }
+    public void PlayInstantiateTurretSFX()
+    {
+        instantiateTurret.Play();
+    }
+    public void PlaySellSFX()
+    {
+        sellSFX.Play();
+    }
+    public void PlayEnemyDeathSFX()
+    {
+        enemyDestroyEffect.Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayWinLevelSFX()
     {
-        
+        winLevelSFX.Play();
     }
+    public void PlayLoseLevelSFX()
+    {
+        loseLevelSFX.Play();
+    }
+
 }

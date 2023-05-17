@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     // and damages all enemies within it.
     public float explosionRadius = 0f;
     public GameObject impactEffect;
+    public AudioSource destroySFX;
 
     public void Seek(Transform _target)
     {
@@ -42,6 +43,7 @@ public class Bullet : MonoBehaviour
 
     void HitTarget()
     {
+        destroySFX.Play();
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         // Destroy effect after 2 seconds
         Destroy(effectIns, 5f);

@@ -34,6 +34,8 @@ public class Turret : MonoBehaviour
 
     public Transform firePoint;
 
+    public AudioSource shootAudio;
+
     void Start()
     {
         // call the function every 0.5f
@@ -67,6 +69,7 @@ public class Turret : MonoBehaviour
         else
         {
             target = null;
+            shootAudio.Stop();
         }
     }
 
@@ -113,6 +116,7 @@ public class Turret : MonoBehaviour
 
     void Laser()
     {
+        shootAudio.Play();
         targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
         targetEnemy.Slow(slowPct);
 
@@ -156,6 +160,7 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
+        shootAudio.Play();
         // typecasting to GameObject type
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();

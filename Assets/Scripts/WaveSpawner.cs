@@ -17,13 +17,7 @@ public class WaveSpawner : MonoBehaviour
     public TMP_Text waveCountdownText;
 
     public GameManager gameManager;
-
     private int waveIndex = 0;
-
-    void Awake()
-    {
-        Time.timeScale = 1;
-    }
 
     void Update()
     {

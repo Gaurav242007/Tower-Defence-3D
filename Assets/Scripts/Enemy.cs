@@ -47,6 +47,9 @@ public class Enemy : MonoBehaviour
         isDead = true;
         PlayerStats.Money += worth;
 
+        FindObjectOfType<AudioController>().GetComponent<AudioController>().PlayEnemyDeathSFX();
+
+
         GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 5f);
 

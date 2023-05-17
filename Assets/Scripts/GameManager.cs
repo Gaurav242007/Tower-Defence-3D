@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     void EndGame()
     {
+        FindObjectOfType<AudioController>().GetComponent<AudioController>().PlayLoseLevelSFX();
         GameIsOver = true;
         gamaOverUI.SetActive(true);
     }
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
     // this function will run when a level is completed
     public void WinLevel()
     {
+        FindObjectOfType<AudioController>().GetComponent<AudioController>().PlayWinLevelSFX();
         GameIsOver = true;
         completeLevelUI.SetActive(true);
     }

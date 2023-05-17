@@ -53,6 +53,7 @@ public class BuildManager : MonoBehaviour
     public void SelectTurretToBuild(TurretBluePrint turret)
     {
         turretToBuild = turret;
+        FindObjectOfType<AudioController>().GetComponent<AudioController>().PlaySelectTurretSFX();
         DeselectNode();
     }
 
