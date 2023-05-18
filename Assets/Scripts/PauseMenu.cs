@@ -18,6 +18,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Toggle()
     {
+        FindObjectOfType<AudioController>().GetComponent<AudioController>().PlayButtonClickSFX();
         // Active Self return true is GameObject is Enabled
         // Or if it's disabled it return false
         ui.SetActive(!ui.activeSelf);

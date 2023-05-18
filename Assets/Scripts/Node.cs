@@ -53,6 +53,8 @@ public class Node : MonoBehaviour
 
     void BuildTurret(TurretBluePrint bluePrint)
     {
+        if (GameManager.turretsCount >= GameManager.MaxTurrets)
+            return;
         // if the Money is less than the turret cost
         if (PlayerStats.Money < bluePrint.cost)
         {
@@ -74,8 +76,7 @@ public class Node : MonoBehaviour
         GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
 
-
-        Debug.Log("Turret build!");
+        GameManager.turretsCount++;
     }
 
     public void UpgradeTurret()
@@ -120,6 +121,8 @@ public class Node : MonoBehaviour
         // Destroying the turrets
         Destroy(turret);
         turretBluePrint = null;
+
+        GameManager.turretsCount--;
     }
 
     void OnMouseEnter()

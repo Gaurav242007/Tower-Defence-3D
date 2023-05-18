@@ -5,6 +5,15 @@ public class GameManager : MonoBehaviour
     public static bool GameIsOver;
     public GameObject gamaOverUI;
     public GameObject completeLevelUI;
+    public static int MaxTurrets;
+    public int levelMaxTurrets;
+    public static int turretsCount = 0;
+
+    void Awake()
+    {
+
+        MaxTurrets = levelMaxTurrets;
+    }
 
     void Start()
     {
