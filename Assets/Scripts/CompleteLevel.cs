@@ -12,10 +12,12 @@ public class CompleteLevel : MonoBehaviour
     public void Continue()
     {
         PlayerPrefs.SetInt("levelReached", levelToUnlock);
+        FindObjectOfType<AudioController>().GetComponent<AudioController>().PlayButtonClickSFX();
         sceneFader.FadeTo(nextLevel);
     }
     public void Menu()
     {
+        FindObjectOfType<AudioController>().GetComponent<AudioController>().PlayButtonClickSFX();
         sceneFader.FadeTo(menuSceneName);
     }
 }

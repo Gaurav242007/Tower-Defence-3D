@@ -11,6 +11,7 @@ public class AudioController : MonoBehaviour
     public AudioSource sellSFX;
     public AudioSource winLevelSFX;
     public AudioSource loseLevelSFX;
+    public AudioSource buttonClickSFX;
     public void PlaySelectTurretSFX()
     {
         selectTurret.Play();
@@ -39,6 +40,11 @@ public class AudioController : MonoBehaviour
     public void PlayLoseLevelSFX()
     {
         loseLevelSFX.Play();
+    }
+
+    public void PlayButtonClickSFX()
+    {
+        buttonClickSFX.Play();
     }
 
 }

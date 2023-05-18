@@ -31,6 +31,7 @@ public class LevelSelector : MonoBehaviour
 
     public void Select(string levelName)
     {
+        FindObjectOfType<AudioController>().GetComponent<AudioController>().PlayButtonClickSFX();
         sceneFader.FadeTo(levelName);
     }
 

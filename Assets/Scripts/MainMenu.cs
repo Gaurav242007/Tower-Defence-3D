@@ -8,12 +8,13 @@ public class MainMenu : MonoBehaviour
     public SceneFader sceneFader;
     public void Play()
     {
+        FindObjectOfType<AudioController>().GetComponent<AudioController>().PlayButtonClickSFX();
         sceneFader.FadeTo(levelToLoad);
     }
 
     public void Quit()
     {
-        Debug.Log("Exiting...");
+        FindObjectOfType<AudioController>().GetComponent<AudioController>().PlayButtonClickSFX();
         Application.Quit();
     }
 }

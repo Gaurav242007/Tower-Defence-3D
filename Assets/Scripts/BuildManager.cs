@@ -32,6 +32,7 @@ public class BuildManager : MonoBehaviour
 
     public void SelectNode(Node node)
     {
+        FindObjectOfType<AudioController>().GetComponent<AudioController>().PlayButtonClickSFX();
         if (selectedNode == node)
         {
             DeselectNode();
@@ -46,6 +47,7 @@ public class BuildManager : MonoBehaviour
 
     public void DeselectNode()
     {
+        FindObjectOfType<AudioController>().GetComponent<AudioController>().PlayButtonClickSFX();
         selectedNode = null;
         nodeUI.Hide();
     }
