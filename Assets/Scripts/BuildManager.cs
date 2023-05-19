@@ -27,7 +27,7 @@ public class BuildManager : MonoBehaviour
     // will return true if turretToBuild is not null
     // else will return false
     // instead of a function using this 
-    public bool CanBuild { get { return turretToBuild != null; } }
+    public bool CanBuild { get { return turretToBuild != null && GameManager.turretsCount <= GameManager.MaxTurrets; } }
     public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } }
 
     public void SelectNode(Node node)

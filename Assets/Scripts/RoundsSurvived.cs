@@ -22,7 +22,7 @@ public class RoundsSurvived : MonoBehaviour
         // wait for some seconds before the animation starts
         yield return new WaitForSeconds(.7f);
 
-        while (round < 20)
+        while (round < PlayerStats.Rounds)
         {
             round++;
             roundsText.text = round.ToString();
