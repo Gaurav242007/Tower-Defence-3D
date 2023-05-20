@@ -9,13 +9,11 @@ public class GameManager : MonoBehaviour
     public static int MaxTurrets;
     public int levelMaxTurrets;
     public static int turretsCount = 0;
-    public TMP_Text turretsLeft;
 
     void Awake()
     {
 
         MaxTurrets = levelMaxTurrets;
-        turretsLeft.text = "0 Turret Left";
     }
     void Start()
     {
@@ -26,8 +24,6 @@ public class GameManager : MonoBehaviour
     {
         if (GameIsOver)
             return;
-        turretsLeft.text = turretsCount.ToString() + " Turrets Left";
-
         if (PlayerStats.Lives <= 0)
         {
             EndGame();
